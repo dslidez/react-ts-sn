@@ -1,15 +1,11 @@
 import React from "react";
 import "./App.css";
+import Header from "./Header";
 
 const App = () => {
   return (
     <div className="App">
-      <ul>
-        <li>css</li>
-        <li>html</li>
-        <li>js</li>
-        <li>react</li>
-      </ul>
+      <Header />
     </div>
   );
 };
