@@ -12,8 +12,8 @@ const MyPosts = () => {
           <button>ADD POST</button>
         </div>
       </div>
-        <Post message='Hi, this is react-app'/>
-        <Post message='Hi, this is TypeScript'/>
+        <Post message='Hi, this is react-app' like='3'/>
+        <Post message='Hi, this is TypeScript' like='0'/>
     </div>
   );
 };
