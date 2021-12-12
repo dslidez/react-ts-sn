@@ -12,9 +12,8 @@ const MyPosts = () => {
           <button>ADD POST</button>
         </div>
       </div>
-        <Post/>
-        <Post/>
-        <Post/>
+        <Post message='Hi, this is react-app'/>
+        <Post message='Hi, this is TypeScript'/>
     </div>
   );
 };
