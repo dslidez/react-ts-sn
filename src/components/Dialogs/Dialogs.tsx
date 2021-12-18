@@ -2,10 +2,12 @@ import React from "react";
 import s from "./Dialogs.module.css"
 
 
-const Dialogs = (props:any) => {
+
+
+const Dialogs: React.FC<any> = (props: any) => {
     return (
         <div>
-            Dialogs
+            PATAU MESSAGE
         </div>
     )
 }

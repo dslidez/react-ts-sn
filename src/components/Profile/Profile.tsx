@@ -2,7 +2,7 @@ import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
 import c from "./Profile.module.css";
 
-const Profile = () => {
+const Profile: React.FC<any> = (props: any) => {
   return (
     <div>
       <div>
