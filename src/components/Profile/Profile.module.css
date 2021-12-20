@@ -2,5 +2,8 @@
     grid-area: c;
     background-color:rgb(59, 156, 163);
   }
+.img img {
+    border-radius: 10px;
+  }
 
   

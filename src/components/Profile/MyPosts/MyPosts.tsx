@@ -5,13 +5,13 @@ import Post from "./Post/Post";
 const MyPosts = () => {
   return (
     <div className={c.content}>
-      <div>
+      <h3>
         My posts
-        <div>
+        <h3>
           <textarea></textarea>
           <button>ADD POST</button>
-        </div>
-      </div>
+        </h3>
+      </h3>
         <Post message='Hi, this is react-app' likesCount={3}/>
         <Post message='Hi, this is TypeScript' likesCount={0}/>
     </div>
