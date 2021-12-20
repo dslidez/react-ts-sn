@@ -1,15 +1,17 @@
 import React from "react";
-import s from "./Dialogs.module.css"
 
+//types:
+type DialogsPropsType = {}
 
-
-
-const Dialogs: React.FC<any> = (props: any) => {
+//function component:
+const Dialogs: React.FC<DialogsPropsType> = (props) => {
     return (
         <div>
-            PATAU MESSAGE
+            Dialogs Content
         </div>
     )
 }
 
-export default Dialogs
+export {
+    Dialogs
+}
