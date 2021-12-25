@@ -23,6 +23,25 @@ type DialogsPropsType = {}
 
 //function component:
 const Dialogs: React.FC<DialogsPropsType> = (props) => {
+
+    let dialogsData = [
+        {id: 1, name: ' Dimych '},
+        {id: 2, name: ' Andrey '},
+        {id: 3, name: ' Sveta '},
+        {id: 4, name: ' Viktor '},
+        {id: 5, name: ' Valera '},
+        {id: 6, name: ' Vika '},
+    ]
+
+    let messagesData = [
+        {id: 1, message: ' Hi '},
+        {id: 2, message: ' Hello '},
+        {id: 3, message: ' Patau '},
+        {id: 4, message: ' Priv '},
+        {id: 5, message: ' Kak dela '},
+        {id: 6, message: ' ogo '},
+    ]
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
@@ -34,10 +53,10 @@ const Dialogs: React.FC<DialogsPropsType> = (props) => {
                <DialogItem name="Vika" id="6"/>
             </div>
             <div className="messages">
-               <Message message="Hi" />
-               <Message message="Yo" />
-               <Message message="WAZZUP" />
-               <Message message="LOL" />
+               <Message message={messagesData[0].message} />
+               <Message message={messagesData[1].message} />
+               <Message message={messagesData[2].message} />
+               <Message message={messagesData[3].message} />
             </div>
         </div>
     )
