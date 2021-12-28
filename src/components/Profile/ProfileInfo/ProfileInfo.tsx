@@ -7,7 +7,7 @@ const ProfileInfo = (props:any) => {
       <div className={c.img}>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoxsa6Bi3ZEuSNlEpOJv9nu_HRNqCKMUAoGxasmY1kuvbmIgKy6csAGQ2Hfolit1f4LQs&usqp=CAU" />
       </div>
-      <div>ava+description</div>
+      <div>Description: REACT GO</div>
     </div>
   );
 };

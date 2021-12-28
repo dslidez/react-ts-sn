@@ -7,17 +7,18 @@ import {Navbar} from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 
 
-type PropsType = {}
 
 
-const App: React.FC<PropsType> = (props) => {
+
+const App = (props: any) => {
+  debugger
   return (
       <div className="app-wrapper">
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-          <Route path={"/Dialogs"} render={() => <Dialogs/>}/> 
-          <Route path={"/Profile"} render={() => <Profile/> }/> 
+          <Route path={"/Dialogs"} render={() => <Dialogs state={props.state}/>}/> 
+          <Route path={"/Profile"} render={() => <Profile state={props.state}/> }/> 
         </div>
       </div>
   );
