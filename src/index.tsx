@@ -5,13 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import state, { addPost } from './redux/state'
+import { rerenderEntireTree } from './render';
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App state={state} addPost={addPost} />
-    </BrowserRouter>,
-  document.getElementById('root')
-);
-
+rerenderEntireTree(state)
 
 reportWebVitals();

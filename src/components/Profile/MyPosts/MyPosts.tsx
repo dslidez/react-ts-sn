@@ -5,14 +5,14 @@ import Post from "./Post/Post";
 const MyPosts = (props: any) => {
  
 
-  let postsElements = props.state.profilePage.posts.map( (p: any) =>  <Post message={p.message} likesCount={p.likesCount} /> )
+  let postsElements = props.state.profilePage.posts.map( (p: any) =>  <Post key={p.id} message={p.message} likesCount={p.likesCount} /> )
 
   let newPostElement = React.createRef<HTMLTextAreaElement>()
 
   let addPost = () => {
-  
-    let text = newPostElement.current?.value
+    let text = newPostElement.current?.value;
     props.addPost(text)
+    newPostElement.current!.value = ''
   }
 
   return (
