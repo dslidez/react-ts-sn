@@ -10,6 +10,7 @@ const MyPosts = (props: any) => {
   let newPostElement = React.createRef<HTMLTextAreaElement>()
 
   let addPost = () => {
+  
     let text = newPostElement.current?.value
     props.addPost(text)
   }
