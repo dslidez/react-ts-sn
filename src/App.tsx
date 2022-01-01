@@ -11,14 +11,13 @@ import Profile from "./components/Profile/Profile";
 
 
 const App = (props: any) => {
-  debugger
   return (
       <div className="app-wrapper">
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
           <Route path={"/Dialogs"} render={() => <Dialogs state={props.state}/>}/> 
-          <Route path={"/Profile"} render={() => <Profile state={props.state}  addPost={props.addPost}/> }/> 
+          <Route path={"/Profile"} render={() => <Profile state={props.state} updateNewPostText={props.updateNewPostText}  addPost={props.addPost}/> }/> 
         </div>
       </div>
   );

@@ -16,8 +16,10 @@ type PostType = {
   likesCount: number
 }
 
+
 type ProfilePageType = {
   posts: Array<PostType>
+  newPostText: string
 }
 
 type DialogsPageType = {
@@ -40,6 +42,7 @@ let state = {
       { id: 2, message: "Hi, this is TypeScript", likesCount: 2 },
       { id: 3, message: "TS HELLO", likesCount: 23 },
     ],
+    newPostText: 'Write here...'
   },
 
   dialogsPage: {
@@ -63,16 +66,24 @@ let state = {
   }
 };
 
-export let addPost = (postMessage: string) => {
+export let addPost = () => {
   let newPost: PostType = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likesCount: 0 
   }; 
-  state.profilePage.posts.push(newPost)
+  state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = ''
   rerenderEntireTree(state)
 
 }
+
+export let updateNewPostText = (newText: string) => {
+  state.profilePage.newPostText = newText
+  rerenderEntireTree(state)
+} 
+
+
 
 
 export default state
