@@ -7,7 +7,7 @@ const Profile = (props: any) => {
   return (
     <div>
       <ProfileInfo state={props.state} />
-      <MyPosts state={props.state} />
+      <MyPosts state={props.state}  addPost={props.addPost} />
     </div>
   );
 };
