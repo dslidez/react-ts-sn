@@ -36,7 +36,7 @@ let state = {
     posts: [
       { id: 1, message: "Hi, this is react-app", likesCount: 12 },
       { id: 2, message: "Hi, this is TypeScript", likesCount: 2 },
-      { id: 2, message: "TS HELLO", likesCount: 23 },
+      { id: 3, message: "TS HELLO", likesCount: 23 },
     ],
   },
 
@@ -60,5 +60,16 @@ let state = {
     ]
   }
 };
+
+export let addPost = (postMessage: any) => {
+  let newPost = {
+    id: 5,
+    message: postMessage,
+    likesCount: 0 
+  }; 
+  state.profilePage.posts.push(newPost)
+
+}
+
 
 export default state
