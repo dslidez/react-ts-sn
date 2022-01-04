@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import  { addPost, state, subscribe, updateNewPostText } from './redux/state'
+import store from './redux/state'
 
 
 let rerenderEntireTree = () => {
     ReactDOM.render(
    <BrowserRouter>
-     <App state={state} addPost={addPost} updateNewPostText={updateNewPostText}/>
+     <App store={store}/>
      </BrowserRouter>,
    document.getElementById('root')
  );
@@ -18,7 +18,7 @@ let rerenderEntireTree = () => {
 
 rerenderEntireTree()
 
-subscribe(rerenderEntireTree);
+store.subscribe(rerenderEntireTree);
  
  
  reportWebVitals();
