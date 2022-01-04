@@ -1,13 +1,14 @@
 .header {
     grid-area: h;
-    background-color:rgb(226, 187, 102);
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px rgb(226, 187, 102);
+    background-color:rgb(248, 207, 118);
+    border-radius: 22px;
+    box-shadow: 0px 0px 3px rgb(214, 211, 201);
   }
   
   .header img {
-    width: 60px;
+    width: 62px;
     height: 60px;
     border-radius: 20px;
+    box-shadow: 0px 0px 3px rgb(255, 255, 255);
   }
   
