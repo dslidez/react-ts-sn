@@ -37,8 +37,16 @@ export type StoreType = {
   subscribe: (callback: () => void) => void
   _rerenderEntireTree: () => void
   getState: () => RootStateType
-  dispatch: (action: any) => void
+  dispatch: (action: AddPostActionType | ChangeNewTextActionType) => void
   
+}
+
+type AddPostActionType = {
+  type: 'ADD-POST'
+}
+type ChangeNewTextActionType = {
+  type: 'UPDATE-NEW-POST-TEXT'
+  newText: string
 }
 
 const store: StoreType  = {
