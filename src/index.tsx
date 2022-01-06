@@ -9,16 +9,17 @@ import store from './redux/state'
 
 let rerenderEntireTree = () => {
     ReactDOM.render(
-   <BrowserRouter>
-     <App store={store}/>
-     </BrowserRouter>,
-   document.getElementById('root')
+        <BrowserRouter>
+             <App store={store} dispatch={store.dispatch.bind(store)}/>
+        </BrowserRouter>,
+     document.getElementById('root')
  );
 }
 
-rerenderEntireTree()
 
 store.subscribe(rerenderEntireTree);
+
+rerenderEntireTree()
  
  
  reportWebVitals();

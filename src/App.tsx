@@ -10,6 +10,7 @@ import { StoreType } from "./redux/state";
 
 type PropsType = {
  store: StoreType
+ dispatch: (action: any) => void
 }
 
 
@@ -22,7 +23,7 @@ const App: React.FC<PropsType> = (props: PropsType) => {
         <Navbar />
         <div className="app-wrapper-content">
           <Route path={"/Dialogs"} render={() => <Dialogs store={props.store}/>}/> 
-          <Route path={"/Profile"} render={() => <Profile store={props.store} updateNewPostText={props.store.updateNewPostText.bind(props.store)}  addPost={props.store.addPost.bind(props.store)}/> }/> 
+          <Route path={"/Profile"} render={() => <Profile store={props.store} dispatch={props.dispatch}/> }/> 
         </div>
       </div>
   );
