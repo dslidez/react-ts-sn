@@ -32,8 +32,8 @@ export type RootStateType = {
 
 export type StoreType = {
   _state: RootStateType
-  updateNewPostText: (newText: string) => void
-  addPost: () => void
+  updateNewPostText?: (newText: string) => void
+  addPost?: () => void
   subscribe: (callback: () => void) => void
   _rerenderEntireTree: () => void
   getState: () => RootStateType
@@ -91,20 +91,6 @@ const store: StoreType  = {
     this._rerenderEntireTree = observer
     },
 
-  addPost() {
-  let newPost: PostType = {
-    id: 5,
-    message: this._state.profilePage.newPostText,
-    likesCount: 0 
-  }; 
-  this._state.profilePage.posts.push(newPost);
-  this._state.profilePage.newPostText = ''
-  this._rerenderEntireTree()
-  },
-  updateNewPostText(newText: string) {
-    this._state.profilePage.newPostText = newText
-    this._rerenderEntireTree()
-  },
   dispatch(action: any) {
     if (action.type === 'ADD-POST') {
       let newPost: PostType = {
