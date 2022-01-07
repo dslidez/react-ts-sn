@@ -1,3 +1,6 @@
+const ADD_POST = 'ADD-POST'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+
 
 type MessageType = {
   id: number
@@ -30,6 +33,22 @@ export type RootStateType = {
   dialogsPage: DialogsPageType
 }
 
+
+export const addPostAC = ( ) => {
+  return {
+    type: ADD_POST
+  }
+}
+
+export const updateNewPosTextAC = (text: string | undefined) => {
+  return {
+    type: UPDATE_NEW_POST_TEXT,
+    newText: text
+  }
+}
+
+
+
 export type StoreType = {
   _state: RootStateType
   updateNewPostText?: (newText: string) => void
@@ -42,7 +61,7 @@ export type StoreType = {
 }
 
 type AddPostActionType = {
-  type: 'ADD-POST'
+  type: 'ADD_POST'
 }
 type ChangeNewTextActionType = {
   type: 'UPDATE-NEW-POST-TEXT'
