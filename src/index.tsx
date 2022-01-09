@@ -4,8 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import store from './redux/state'
+import store from './redux/redux-store'
+import { StoreType } from './redux/store';
 
+
+type PropsType = {
+    store: StoreType
+   }
 
 let rerenderEntireTree = () => {
     ReactDOM.render(
@@ -17,7 +22,10 @@ let rerenderEntireTree = () => {
 }
 
 
-store.subscribe(rerenderEntireTree);
+store.subscribe(() => {
+    let state = store.getState()
+    rerenderEntireTree();
+});
 
 rerenderEntireTree()
  
