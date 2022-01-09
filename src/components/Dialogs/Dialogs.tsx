@@ -1,5 +1,3 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
 import { sendMessageAC, updateNewMessageBodyAC } from "../../redux/state";
 import { DialogItem } from "./DialogItem/DialogItem";
 import s from "./Dialogs.module.css";
