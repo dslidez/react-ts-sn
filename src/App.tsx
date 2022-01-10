@@ -9,7 +9,7 @@ import { StoreType } from "./redux/store";
 
 
 type PropsType = {
- store: StoreType
+ store: any
  dispatch: (action: any) => void
 }
 

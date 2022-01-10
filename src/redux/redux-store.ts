@@ -6,7 +6,7 @@ import { profileReducer } from './profile-reducer'
 export type AppStateType = ReturnType<typeof rootReducer>;
 
 export const rootReducer = combineReducers({
-    dialogPage: dialogsReducer,
+    dialogsPage: dialogsReducer,
     profilePage: profileReducer,
 })
 
