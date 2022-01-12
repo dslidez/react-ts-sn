@@ -21,6 +21,7 @@ const Dialogs = (props: any) => {
   let newMessageBody = state.dialogsPage.newMessageBody
 
   let onSendMessageClick = () => {
+    sendMessageAC
     props.store.dispatch(sendMessageAC())
   }
   let onNewMessageChange = (e: any) => {
