@@ -1,28 +1,25 @@
 import React from "react";
+import { connect } from "react-redux";
 import { addPostAC, updateNewPosTextAC } from "../../../redux/store";
 import MyPosts from "./MyPosts";
 import Post from "./Post/Post";
 
-const MyPostsContainer = (props: any) => {
-  let newPostElement = React.createRef<HTMLTextAreaElement>();
-
-  let addPost = () => {
-    props.store.dispatch(addPostAC());
-  };
-
-  let onPostChange = (text: string) => {
-    let action = updateNewPosTextAC(text)
-    props.store.dispatch(action)
-
-  }
-
-
-  return (<MyPosts store={props.store}   posts={props.posts} updateNewPostText={onPostChange} addPost={addPost} />);
-};
-
 let mapStateToProps = (state: any) => {
   return {
+    posts: state.profilePage.posts,
+    newPostText: state.profilePage.newPostText
+  }
+}
 
+let mapDispatchToProps = (dispatch: any) => {
+  return {
+    updateNewPostText: (text: string) => {
+      let action = updateNewPosTextAC(text)
+      dispatch(action)
+    },
+    addPost:  () => {
+     dispatch(addPostAC());
+    }
   }
 }
 
