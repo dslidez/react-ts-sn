@@ -20,4 +20,13 @@ const MyPostsContainer = (props: any) => {
   return (<MyPosts store={props.store}   posts={props.posts} updateNewPostText={onPostChange} addPost={addPost} />);
 };
 
+let mapStateToProps = (state: any) => {
+  return {
+
+  }
+}
+
+
+const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps) (MyPosts)
+
 export default MyPostsContainer;
