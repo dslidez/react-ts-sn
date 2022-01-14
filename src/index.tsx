@@ -13,7 +13,7 @@ type PropsType = {
   store: StoreType;
 };
 
-let rerenderEntireTree = () => {
+
   ReactDOM.render(
     <BrowserRouter>
         <Provider store={store}>
@@ -22,13 +22,9 @@ let rerenderEntireTree = () => {
     </BrowserRouter>,
     document.getElementById("root")
   );
-};
 
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree();
-});
 
-rerenderEntireTree();
+
+
 
 reportWebVitals();
