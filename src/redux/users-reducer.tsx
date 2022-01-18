@@ -5,11 +5,13 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS";
 
 
+
 let initialState = {
   users: [
-    // { id: 1, followed: false, fullName: "Dmitry", status: 'I am a pes', location: {city: 'Minsk', country: 'Belarus'} },
-    // { id: 2, followed: true, fullName: "Oleg", status: 'hey', location: {city: 'Mogilev', country: 'Belarus'} },
-    // { id: 3, followed: false, fullName: "Marina", status: 'hello world', location: {city: 'Moscow', country: 'Russia'} },
+    //comment state
+    { id: 1, photoUrl: 'https://media.istockphoto.com/vectors/yin-yang-panda-cute-logo-vector-illustration-vector-id1170794027?k=20&m=1170794027&s=612x612&w=0&h=QvlXWRWUe2hz_WUPvczDxdcMAOvH9NCv8P-GvzCVnqw=' , followed: false, fullName: "Dmitry", status: 'I am a pes', location: {city: 'Minsk', country: 'Belarus'} },
+    { id: 2, photoUrl: 'https://media.istockphoto.com/vectors/yin-yang-panda-cute-logo-vector-illustration-vector-id1170794027?k=20&m=1170794027&s=612x612&w=0&h=QvlXWRWUe2hz_WUPvczDxdcMAOvH9NCv8P-GvzCVnqw=' , followed: true, fullName: "Oleg", status: 'hey', location: {city: 'Mogilev', country: 'Belarus'} },
+    { id: 3, photoUrl: 'https://media.istockphoto.com/vectors/yin-yang-panda-cute-logo-vector-illustration-vector-id1170794027?k=20&m=1170794027&s=612x612&w=0&h=QvlXWRWUe2hz_WUPvczDxdcMAOvH9NCv8P-GvzCVnqw=' , followed: false, fullName: "Marina", status: 'hello world', location: {city: 'Moscow', country: 'Russia'} },
   ]
 };
 
