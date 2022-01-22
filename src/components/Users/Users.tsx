@@ -5,6 +5,9 @@ import UserPhoto from './../../assets/img/images.png'
 
 
 let Users = (props: any) => {
+    
+    let getUsers = () => {
+
     if (props.users.length === 0) {
 
         axios.get('https://social-network.samuraijs.com/api/1.0/users').then((response: any) =>{
@@ -12,12 +15,13 @@ let Users = (props: any) => {
             props.setUsers(response.data.items)
     });
 
-    }
+    } }
   
 
 
     return (
         <div>
+            <button onClick={getUsers}></button>
             {
                 props.users.map((u:any) => <div key={u.id}>
                     <span>
