@@ -3,3 +3,7 @@
     height: 85px;
     border-radius: 50px;
 }
+
+.selectedPage{
+    font-weight: bold;
+}
