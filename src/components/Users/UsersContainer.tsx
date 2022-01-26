@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, unfollowAC } from '../../redux/users-reducer'
 import axios from "axios"; 
 import { Users } from './Users';
+import preloader from './../../assets/img/Rocket.gif'
 
 class UsersContainer extends React.Component<any> {
     componentDidMount() {
@@ -24,7 +25,8 @@ class UsersContainer extends React.Component<any> {
     }
   
     render(): any {
-      return (
+      return <>
+      {this. props.isFetching ? <img src={preloader}/> : null }
         <Users totalUsersCount={this.props.totalUsersCount}
         pageSize={this.props.pageSize} 
         currentPage={this.props.currentPage}
@@ -32,8 +34,8 @@ class UsersContainer extends React.Component<any> {
         users={this.props.users}
         follow={this.props.follow}
         unfollow={this.props.unfollow}/>
-      );
-    }
+      ;
+      </>}
   }
   
 
@@ -43,6 +45,7 @@ let mapStateToProps = (state:any) => {
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
+        isFetching: state.usersPage.isFetching,
     }
 }
 
