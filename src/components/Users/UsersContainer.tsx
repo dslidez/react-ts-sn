@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, toggleIsFetchingAC, unfollowAC } from '../../redux/users-reducer'
+import { follow, setCurrentPage, setTotalUsersCount, setUsers, toggleIsFetching, unfollow } from '../../redux/users-reducer'
 import axios from "axios"; 
 import { Users } from './Users';
 import preloader from './../../assets/img/Rocket.gif'
@@ -56,25 +56,25 @@ let mapStateToProps = (state:any) => {
 let mapDispatchToProps = (dispatch: any) => {
     return {
         follow: (userId: any) => {
-            dispatch(followAC(userId))
+            dispatch(follow(userId))
         },
         unfollow: (userId: any) => {
-            dispatch(unfollowAC(userId))
+            dispatch(unfollow(userId))
         },
         setUsers: (users: any) => {
-            dispatch(setUsersAC(users))
+            dispatch(setUsers(users))
         },
         setCurrentPage: (pageNumber: any) => {
-            dispatch(setCurrentPageAC(pageNumber))
+            dispatch(setCurrentPage(pageNumber))
         },
         setTotalUsersCount: (totalCount: any) => {
-            dispatch(setTotalUsersCountAC(totalCount))
+            dispatch(setTotalUsersCount(totalCount))
         },
         toggleIsFetching: (isFetching: boolean) => {
-            dispatch(toggleIsFetchingAC(isFetching))
+            dispatch(toggleIsFetching(isFetching))
         },
-
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (UsersContainer)
+export default connect(mapStateToProps, {follow,unfollow, setUsers,
+  setCurrentPage, setTotalUsersCount,toggleIsFetching}) (UsersContainer)

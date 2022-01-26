@@ -60,10 +60,10 @@ export let usersReducer = (state: any = initialState, action: any) => {
   }
 };
 
-
-export const followAC = ( userId: any ) => { return { type: FOLLOW, userId }}
-export const unfollowAC = ( userId: any ) => { return {type: UNFOLLOW, userId }}
-export const setUsersAC = ( users: any ) => { return {type: SET_USERS, users }}
-export const setCurrentPageAC = ( currentPage: any ) => { return {type: SET_CURRENT_PAGE, currentPage }}
-export const setTotalUsersCountAC = ( totalUsersCount: any ) => { return {type: SET_TOTAL_USERS_COUNT, count: totalUsersCount }}
-export const toggleIsFetchingAC = ( isFetching: boolean ) => { return {type: TOGGLE_IS_FETCHING, isFetching}}
+//action creators
+export const follow = ( userId: any ) => { return { type: FOLLOW, userId }}
+export const unfollow = ( userId: any ) => { return {type: UNFOLLOW, userId }}
+export const setUsers = ( users: any ) => { return {type: SET_USERS, users }}
+export const setCurrentPage = ( currentPage: any ) => { return {type: SET_CURRENT_PAGE, currentPage }}
+export const setTotalUsersCount = ( totalUsersCount: any ) => { return {type: SET_TOTAL_USERS_COUNT, count: totalUsersCount }}
+export const toggleIsFetching = ( isFetching: boolean ) => { return {type: TOGGLE_IS_FETCHING, isFetching}}
