@@ -2,6 +2,7 @@ import { PostType } from "./store";
 
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const SET_USER_PROFILE = "SET_USER_PROFILE";
 
 
 let initialState = {
@@ -10,7 +11,8 @@ let initialState = {
     { id: 2, message: "Hi, this is TypeScript", likesCount: 2 },
     { id: 3, message: "TS HELLO", likesCount: 23 },
   ],
-  newPostText: 'Write here...'
+  newPostText: 'Write here...',
+  profile: null,
 }
 
 export let profileReducer = (state: any = initialState, action: any) => {
@@ -32,7 +34,17 @@ export let profileReducer = (state: any = initialState, action: any) => {
       return {...state, 
                        newPostText: action.newText} 
       
+    case SET_USER_PROFILE: 
+      return {...state, 
+                       profile: action.profile} 
+      
     default:
       return state;
   }
 };
+
+export const addPostAC = ( ) => ({type: ADD_POST})
+export const setUserProfile = ( profile:any) => ({type: SET_USER_PROFILE, profile})
+export const updateNewPosTextAC = (text: string | undefined) => 
+( {  type: UPDATE_NEW_POST_TEXT, newText: text} )
+

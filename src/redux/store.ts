@@ -40,17 +40,7 @@ export type RootStateType = {
 }
 
 
-export const addPostAC = ( ) => {
-  return {
-    type: ADD_POST
-  }
-}
-export const updateNewPosTextAC = (text: string | undefined) => {
-  return {
-    type: UPDATE_NEW_POST_TEXT,
-    newText: text
-  }
-}
+
 
 export const sendMessageAC = ( ) => {
   return {

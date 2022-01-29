@@ -8,7 +8,11 @@ const ProfileInfo = (props:any) => {
       <div className={c.img}>
         <img  alt="NO PIC" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoxsa6Bi3ZEuSNlEpOJv9nu_HRNqCKMUAoGxasmY1kuvbmIgKy6csAGQ2Hfolit1f4LQs&usqp=CAU" />
       </div>
-      <div>Description: REACT GO</div>
+      <div>
+      <img src={props.profile.photos.large}/>
+      </div>
+      <h2>{props.profile.fullName}</h2>
+      <div>Description: {props.profile.aboutMe}</div>
     </div>
   );
 };
