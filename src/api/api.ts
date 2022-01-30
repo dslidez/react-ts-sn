@@ -35,7 +35,7 @@ export const profileAPI = {
 }
 
 export const authAPI = {
-  me() {
-    instance.get(`auth/me`)
+  me():any {
+    return instance.get(`auth/me`)
   }
 }
