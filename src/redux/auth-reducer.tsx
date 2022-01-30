@@ -24,3 +24,7 @@ export let authReducer = (state: any = initialState, action: any) => {
 
 //action creators
 export const setAuthUserData = ( userId: any , email: any, login: any) => { return { type: SET_USER_DATA, data: {userId, email, login} }}
+
+export const getAuthUserDataTC = () => (dispatch: any) => {
+
+} 
