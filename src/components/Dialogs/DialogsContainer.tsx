@@ -10,7 +10,8 @@ import { Message } from "./Message/Message";
 
 let mapStateToProps = (state: any) => {
   return {
-    dialogsPage: state.dialogsPage
+    dialogsPage: state.dialogsPage,
+    isAuth: state.auth.isAuth
   }
 }
 
