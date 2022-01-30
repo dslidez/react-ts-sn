@@ -1,3 +1,4 @@
+import { usersAPI } from "../api/api";
 import { PostType } from "./store";
 
 const FOLLOW = "FOLLOW";
@@ -77,3 +78,15 @@ export const setCurrentPage = ( currentPage: any ) => { return {type: SET_CURREN
 export const setTotalUsersCount = ( totalUsersCount: any ) => { return {type: SET_TOTAL_USERS_COUNT, count: totalUsersCount }}
 export const toggleIsFetching = ( isFetching: boolean ) => { return {type: TOGGLE_IS_FETCHING, isFetching}}
 export const toggleFollowingProgress = ( isFetching: boolean,  userId: any ) => { return {type: TOGGLE_IS_FETCHING_PROGRESS, isFetching,  userId}}
+
+export const getUsersThunkCreator = (currentPage: any, pageSize:any) => { 
+  return (
+ (dispatch: any) => {
+  dispatch(toggleIsFetching(true));
+  usersAPI.getUsers(currentPage,pageSize).then((data: any) => {
+    dispatch(toggleIsFetching(false));
+    dispatch(setUsers(data.items));
+    dispatch(setTotalUsersCount(data.totalCount));
+    });
+  })
+}
