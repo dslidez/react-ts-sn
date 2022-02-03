@@ -42,7 +42,7 @@ let mapStateToProps = (state: any) => ({
 const ProfileContainerr = compose<React.FC>(
   connect(mapStateToProps, {getUserProfileTC}),
   withRouter,
-  withAuthRedirect
+ // withAuthRedirect
 )(ProfileContainer)
 
 export default ProfileContainerr
