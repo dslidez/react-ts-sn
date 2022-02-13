@@ -5,18 +5,15 @@ import s from "./Dialogs.module.css";
 import { Message } from "./Message/Message";
 
 
+export type DialogsPropsType = {}
 
-const Dialogs = (props: any) => {
+
+const Dialogs: React.FC<any> = (props) => {
  
   const state = props.dialogsPage
 
-  let dialogsElement = state.dialogs.map((d: any) => (
-    <DialogItem name={d.name} id={d.id} state={state} />
-  ));
-
-  let messagesElements =  state.messages.map((m: any) => (
-    <Message message={m.message} state={state} />
-  ));
+  let dialogsElement = state.dialogs.map((d: any) => <DialogItem key={d.id} name={d.name} id={d.id} />);
+  let messagesElements =  state.messages.map((m: any) => <Message key={m.id} message={m.message} id={m.id} />);
 
   
   let newMessageBody = state.newMessageBody
