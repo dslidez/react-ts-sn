@@ -1,13 +1,40 @@
 import { profileAPI } from "../api/api";
-import { PostType } from "./store";
 
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 const SET_USER_PROFILE = "SET_USER_PROFILE";
 const SET_STATUS = "SET_STATUS";
 
+type PostType = {
+  id: number
+  message: string
+  likesCount: number
+}
+export type ProfileInitialStateType = {
+  posts: Array<PostType>
+  newPostText: string
+  profile: ProfilePageType | null
+  status: string
+}
 
-let initialState = {
+export type ProfilePageType = {
+  aboutMe: string,
+  lookingForAJob: boolean,
+  lookingForAJobDescription: null | string,
+  fullName: string,
+  userId: number,
+  photos: PhotosType
+}
+
+export type PhotosType = { small: string, large: string }
+
+export type ProfileActionType = ReturnType<typeof addPostAC>
+  | ReturnType<typeof updateNewPosTextAC>
+  | ReturnType<typeof setUserProfile>
+
+
+
+let initialState: ProfileInitialStateType = {
   posts: [
     { id: 1, message: "Hi, this is react-app", likesCount: 12 },
     { id: 2, message: "Hi, this is TypeScript", likesCount: 2 },
@@ -18,7 +45,7 @@ let initialState = {
   status: ''
 }
 
-export let profileReducer = (state: any = initialState, action: any) => {
+export let profileReducer = (state: ProfileInitialStateType = initialState, action: any) => {
   switch (action.type) {
 
     

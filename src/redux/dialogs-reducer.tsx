@@ -2,23 +2,31 @@
 const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY";
 const SEND_MESSAGE = "SEND-MESSAGE";
 
-let initialState = {
+//TS
+export type DialogsDataType = {
+  id: number
+  name: string
+}
+export type MessagesDataType = {
+  id: number
+  message: string
+}
+export type DialogsInitialStateType = {
+  dialogs: Array<DialogsDataType>,
+  messages: Array<MessagesDataType>,
+  newMessageBody: string
+}
 
+
+let initialState: DialogsInitialStateType = {
   dialogs: [
-     { id: 1, name: " Dimych " },
-     { id: 2, name: " Andrey " },
-     { id: 3, name: " Sveta " },
-     { id: 4, name: " Viktor " },
-     { id: 5, name: " Valera " },
-     { id: 6, name: " Vika " },
-   ],
+     { id: 1, name: " Andrew " },
+     { id: 2, name: " Oleg " },
+     { id: 3, name: " Makar " },
+  ],
    messages: [
      { id: 1, message: " Hi " },
-     { id: 2, message: " Hello " },
-     { id: 3, message: " Patau " },
-     { id: 4, message: " Priv " },
-     { id: 5, message: " Kak dela " },
-     { id: 6, message: " ogo " },
+     { id: 2, message: " WAZZUP?!" },
    ],
    newMessageBody: ''
  }
