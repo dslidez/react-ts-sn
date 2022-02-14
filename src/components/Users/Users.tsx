@@ -8,27 +8,14 @@ import { followThunkCreator, unfollowThunkCreator } from './../../redux/users-re
 
 export let Users = (props: any) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-  let pages = [];
+  let pages = []
   for (let i = 1; i <= pagesCount; i++) {
-    pages.push(i);
+    pages.push(i)
   }
+
 
   return (
     <div>
-      <div>
-        {pages.map((p) => {
-          return (
-            <span
-              onClick={(e) => {
-                props.onPageChanged(p);
-              }}
-              className={props.currentPage === p ? styles.selectedPage : ""}
-            >
-              {p}
-            </span>
-          );
-        })}
-      </div>
       {props.users.map((u: any) => (
         <div key={u.id}>
           <span>
@@ -72,6 +59,21 @@ export let Users = (props: any) => {
           </span>
         </div>
       ))}
+      <li></li>
+       <div>
+        {pages.map((p) => {
+          return (
+            <span
+              onClick={(e) => {
+                props.onPageChanged(p)
+              }}
+              className={props.currentPage === p ? styles.selectedPage : ""}
+            >
+              {p}
+            </span>
+          )
+        })}
+      </div>
     </div>
-  );
-};
+  )
+}

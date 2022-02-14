@@ -6,6 +6,8 @@ import { Users } from './Users';
 import preloader from './../../assets/img/Rocket.gif'
 import { usersAPI } from './../../api/api';
 import { getUsersThunkCreator, followThunkCreator, unfollowThunkCreator } from './../../redux/users-reducer';
+import s from './users.module.css'
+
 
 class UsersContainer extends React.Component<any> {
     componentDidMount() {
@@ -31,7 +33,7 @@ class UsersContainer extends React.Component<any> {
   
     render(): any {
       return <>
-      {this. props.isFetching ? <img src={preloader}/> : null }
+      {this. props.isFetching ?  <img src={preloader}/> : null }
         <Users totalUsersCount={this.props.totalUsersCount}
         pageSize={this.props.pageSize} 
         currentPage={this.props.currentPage}

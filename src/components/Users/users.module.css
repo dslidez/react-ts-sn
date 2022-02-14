@@ -5,5 +5,10 @@
 }
 
 .selectedPage{
+    color: yellow;
     font-weight: bold;
+}
+
+.pre{
+    border-radius: 50%;
 }
