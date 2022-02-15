@@ -8,6 +8,8 @@ import defaultSmallUserPhoto from './../../../assets/img/images.png'
 const ProfileInfo = (props:any) => {
   return (
     <div className={c.content}>
+    <div className={c.content2}>
+
       {/* <div className={c.img}>
         <img  alt="NO PIC" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoxsa6Bi3ZEuSNlEpOJv9nu_HRNqCKMUAoGxasmY1kuvbmIgKy6csAGQ2Hfolit1f4LQs&usqp=CAU" />
       </div> */}
@@ -21,6 +23,7 @@ const ProfileInfo = (props:any) => {
       <h2>{props.profile.fullName}</h2>
       <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
       <div>Description: {props.profile.aboutMe}</div>
+    </div>
     </div>
   );
 };

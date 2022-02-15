@@ -69,7 +69,8 @@ export let Users = (props: any) => {
               }}
               className={props.currentPage === p ? styles.selectedPage : ""}
             >
-              {p}
+             { p }|
+            
             </span>
           )
         })}

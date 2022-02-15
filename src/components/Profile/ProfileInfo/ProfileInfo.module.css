@@ -1,5 +1,11 @@
 .content {
-    padding: 5px
+    padding: 20px;
+}
+
+.content2 {
+    border: solid;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .img img{
