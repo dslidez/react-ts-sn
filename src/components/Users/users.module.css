@@ -1,4 +1,10 @@
+.userspage{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
 .userPhoto {
+    padding-top: 5px;
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -11,4 +17,18 @@
 
 .pre{
     border-radius: 50%;
+}
+
+.name {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.status {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.but {
+    padding-left: 20px;
+    padding-top: 5px;
 }

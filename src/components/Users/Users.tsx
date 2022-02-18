@@ -15,7 +15,7 @@ export let Users = (props: any) => {
 
 
   return (
-    <div>
+    <div className={styles.userspage}>
       {props.users.map((u: any) => (
         <div key={u.id}>
           <span>
@@ -27,7 +27,7 @@ export let Users = (props: any) => {
                 />
               </NavLink>
             </div>
-            <div>
+            <div className={styles.but}>
               {u.followed ? (
                 <button disabled={props.followingInProgress.some((id:any) => id === u.id)}
                 onClick={() => props.unfollowThunkCreator(u.id)}>
@@ -47,14 +47,9 @@ export let Users = (props: any) => {
           </span>
           <span>
             <span>
-              <div>{u.name}</div>
-              {u.status}
-              <div></div>
-            </span>
-
-            <span>
-              <div>{"u.location.country"}</div>
-              <div>{"u.location.city"}</div>
+              <div className={styles.name}>{u.name}</div>
+              
+              <div className={styles.status}>{u.status}</div>
             </span>
           </span>
         </div>
