@@ -1,7 +1,7 @@
 import c from "./ProfileInfo.module.css";
 import { ProfileStatus } from "./ProfileStatus";
 import React from 'react'
-import defaultSmallUserPhoto from './../../../assets/img/images.png'
+import defaultSmallUserPhoto from './../../../assets/img/imageuser.png'
 
 
 

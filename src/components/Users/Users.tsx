@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./users.module.css";
-import UserPhoto from "./../../assets/img/images.png";
+import UserPhoto from "./../../assets/img/imageuser.png";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { usersAPI } from "../../api/api";
