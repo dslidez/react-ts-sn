@@ -29,7 +29,7 @@ export let Users = (props: any) => {
             </div>
             <div className={styles.but}>
               {u.followed ? (
-                <button disabled={props.followingInProgress.some((id:any) => id === u.id)}
+                <button  disabled={props.followingInProgress.some((id:any) => id === u.id)}
                 onClick={() => props.unfollowThunkCreator(u.id)}>
 
                   Unfollow

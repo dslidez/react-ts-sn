@@ -1,7 +1,7 @@
 .header {
     grid-area: h;
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(67,101,120,1) 68%, rgba(59,94,114,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(67,101,120,1) 68%, rgb(41, 64, 78) 100%);
     border-radius: 22px;
     width: inherit;
     max-width: inherit;

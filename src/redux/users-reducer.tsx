@@ -1,5 +1,4 @@
 import { usersAPI } from "../api/api";
-import { PostType } from "./store";
 
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
@@ -62,7 +61,7 @@ export let usersReducer = (state: any = initialState, action: any) => {
      return { ...state, 
       followingInProgress: action.isFetching 
       ?[...state.followingInProgress, action.userId] :
-       state.followingInProgress.filter((id:any) => id != action.userId)
+       state.followingInProgress.filter((id:any) => id !== action.userId)
       }
    }
     default:
@@ -99,7 +98,7 @@ export const followThunkCreator  = (userId: any) => {
   dispatch(toggleFollowingProgress(true, userId));
   usersAPI.follow(userId)
     .then((response: any) => {
-      if (response.data.resultCode == 0) {
+      if (response.data.resultCode === 0) {
         dispatch(follow(userId));
       }
       dispatch(toggleFollowingProgress(false, userId))
@@ -113,7 +112,7 @@ export const unfollowThunkCreator  = (userId: any) => {
   dispatch(toggleFollowingProgress(true, userId));
   usersAPI.unfollow(userId)
     .then((response: any) => {
-      if (response.data.resultCode == 0) {
+      if (response.data.resultCode === 0) {
         dispatch(unfollow(userId));
       }
       dispatch(toggleFollowingProgress(false, userId))
