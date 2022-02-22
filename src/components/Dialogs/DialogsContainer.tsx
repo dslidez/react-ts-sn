@@ -3,7 +3,6 @@ import { compose } from "redux";
 import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 import { sendMessageAC, updateNewMessageBodyAC } from "../../redux/store";
 import { Dialogs } from "./Dialogs";
-import s from "./Dialogs.module.css";
 
 
 

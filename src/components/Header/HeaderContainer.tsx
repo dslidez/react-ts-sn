@@ -1,9 +1,7 @@
-import axios from "axios";
 import React from "react";
 import { connect } from "react-redux";
 import { Header } from "./Header";
 import {getAuthUserDataTC} from './../../redux/auth-reducer'
-import { authAPI } from "../../api/api";
 
 type MyProps = { };
 type MyState = { value: string };

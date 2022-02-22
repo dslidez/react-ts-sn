@@ -4,9 +4,8 @@ import React from "react";
 import { connect } from "react-redux";
 import Profile from "./Profile";
 import { getUserProfileTC, getStatus, updateStatus } from './../../redux/profile-reducer';
-import { Redirect, withRouter } from "react-router-dom";
-import { profileAPI } from "../../api/api";
-import { withAuthRedirect } from "../../hoc/withAuthRedirect";
+import { withRouter } from "react-router-dom";
+
 import { compose } from "redux";
 
 class ProfileContainer extends React.Component<any> {
