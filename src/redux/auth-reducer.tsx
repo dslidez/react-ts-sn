@@ -5,8 +5,6 @@ const SET_USER_DATA = "SET_USER_DATA";
 
 export type authReducerActionType = ReturnType<typeof setAuthUserData>
 
-
-
 export type AuthInitialStateType = {
   userId: null | number,
   email: null | string,

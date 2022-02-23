@@ -1,10 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { follow, setCurrentPage, setTotalUsersCount, setUsers, toggleIsFetching, unfollow , toggleFollowingProgress} from '../../redux/users-reducer'
-import axios from "axios"; 
 import { Users } from './Users';
 import preloader from './../../assets/img/Rocket.gif'
-import { usersAPI } from './../../api/api';
 import { getUsersThunkCreator, followThunkCreator, unfollowThunkCreator } from './../../redux/users-reducer';
 import s from './users.module.css'
 
