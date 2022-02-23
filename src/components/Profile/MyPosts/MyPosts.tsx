@@ -19,6 +19,12 @@ const MyPosts = (props: any) => {
     props.updateNewPostText(text)
   }
 
+  const onKeyPressHandler = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        onAddPost();
+    }
+}
 
 
   return (
@@ -32,6 +38,7 @@ const MyPosts = (props: any) => {
                   ref={newPostElement}  
                   rows={3} cols={40} 
                   placeholder={"Write something..."} 
+                  onKeyPress={onKeyPressHandler}
                   >
           </textarea>
           <div className={c.addpostbut} onClick={onAddPost}>ADD POST</div>
