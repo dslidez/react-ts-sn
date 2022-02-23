@@ -7,7 +7,8 @@ textarea {
     resize: none;
     outline: none;
 	-moz-appearance: none;
-	border: 1px solid #999;
+	border: 3px solid  rgb(41, 64, 78);
+    border-radius: 6px;
 }
 
 .addpostbut {

@@ -14,3 +14,7 @@
     height: 250px;
     border-radius: 50%;
   }
+
+.status {
+    cursor: pointer;
+}

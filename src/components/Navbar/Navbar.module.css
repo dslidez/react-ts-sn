@@ -17,9 +17,11 @@
   color: rgb(59, 94, 114);
   padding: 8px 16px;
   text-decoration: none;
+  transition-duration: 0.3s;
 }
 
 .item a:hover{
+  transition-duration: 0.3s;
   background-color: rgb(59, 94, 114);
   color: white;
 }

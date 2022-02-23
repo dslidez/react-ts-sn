@@ -10,7 +10,8 @@
 }
 .app-wrapper-content {
     grid-area: c;
-    background-color: rgb(159, 99, 212);
+    background-color: rgb(170, 127, 207);
     border-radius: 10px;
     margin: 5px;
+    margin-right: 11px;
 }
