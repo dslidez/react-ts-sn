@@ -40,7 +40,7 @@ let initialState: ProfileInitialStateType = {
     { id: 2, message: "Hi, this is TypeScript", likesCount: 2 },
     { id: 3, message: "TS HELLO", likesCount: 23 },
   ],
-  newPostText: 'Write here...',
+  newPostText: '',
   profile: null,
   status: ''
 }
