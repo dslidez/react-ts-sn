@@ -19,7 +19,7 @@ export type DialogType = {
 export type PostType = {
   id: number
   message: string
-  likesCount: n umber
+  likesCount: number
 }
 
 export type ProfilePageType = {
