@@ -22,7 +22,7 @@ export type PostType = {
   likesCount: number
 }
 
-export type ProfilePageTy pe = {
+export type ProfilePageType = {
   posts: Array<PostType>
   newPostText: string
 }
