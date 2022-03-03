@@ -36,7 +36,11 @@ export const profileAPI = {
  },
  updateStatus(status: any) {
    return instance.put(`profile/status`, {status: status});
- }
+ },
+ updatePhoto(image: File) {
+   return instance.put(`profile/photo`, {image: image});
+ },
+
 }
 
 export const authAPI = {

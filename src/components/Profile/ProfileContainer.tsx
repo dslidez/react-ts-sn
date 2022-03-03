@@ -6,6 +6,8 @@ import Profile from "./Profile";
 import { getUserProfileTC, getStatus, updateStatus } from './../../redux/profile-reducer';
 import { withRouter } from "react-router-dom";
 
+
+
 import { compose } from "redux";
 
 class ProfileContainer extends React.Component<any> {
@@ -19,7 +21,15 @@ class ProfileContainer extends React.Component<any> {
     this.props.getStatus(userId)
   }
   componentDidUpdate() {
-      document.title = 'PAGE: ' + this.props.profile.fullName
+   
+   if (!this.props.profile) {
+
+   } else {
+
+    document.title = this.props.profile.fullName
+
+   }
+    
   }
   componentWillUnmount() {
     document.title = 'SOCIAL NETWORK'
@@ -27,7 +37,9 @@ class ProfileContainer extends React.Component<any> {
 
   render() {
     return (
+      <>
     <Profile {...this.props} profile={this.props.profile} status={this.props.status} updateStatus={this.props.updateStatus}/>
+     </>
     )
   }
 }

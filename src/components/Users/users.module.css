@@ -33,3 +33,11 @@
     padding-top: 5px;
     font-weight: bold;
 }
+
+.gif {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

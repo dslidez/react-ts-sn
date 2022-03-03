@@ -1,10 +1,12 @@
 import MyPosts from "./MyPosts/MyPosts";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import preloader from './../../assets/img/WMDx.gif'
+import s from './Profile.module.css'
 
 const Profile = (props: any) => {
   if (!props.profile) {
-    return <div> NO PROFILE </div>
+    return <div>   <img className={s.gif} src={preloader}/>  </div>
   }
 
   return (

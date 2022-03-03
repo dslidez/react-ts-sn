@@ -4,15 +4,17 @@ import UserPhoto from "./../../assets/img/imageuser.png";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { usersAPI } from "../../api/api";
-import { followThunkCreator, unfollowThunkCreator } from './../../redux/users-reducer';
+import {
+  followThunkCreator,
+  unfollowThunkCreator,
+} from "./../../redux/users-reducer";
 
 export let Users = (props: any) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-  let pages = []
+  let pages = [];
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i)
   }
-
 
   return (
     <div className={styles.userspage}>
@@ -29,18 +31,22 @@ export let Users = (props: any) => {
             </div>
             <div className={styles.but}>
               {u.followed ? (
-                <button  disabled={props.followingInProgress.some((id:any) => id === u.id)}
-                onClick={() => props.unfollowThunkCreator(u.id)}>
-
+                <button
+                  disabled={props.followingInProgress.some(
+                    (id: any) => id === u.id
+                  )}
+                  onClick={() => props.unfollowThunkCreator(u.id)}
+                >
                   Unfollow
                 </button>
               ) : (
                 <button
-                disabled={props.followingInProgress.some((id:any) => id === u.id)}
-                  onClick={() => props.followThunkCreator(u.id)}>
-
+                  disabled={props.followingInProgress.some(
+                    (id: any) => id === u.id
+                  )}
+                  onClick={() => props.followThunkCreator(u.id)}
+                >
                   Follow
-
                 </button>
               )}
             </div>
@@ -48,28 +54,27 @@ export let Users = (props: any) => {
           <span>
             <span>
               <div className={styles.name}>{u.name}</div>
-              
+
               <div className={styles.status}>{u.status}</div>
             </span>
           </span>
         </div>
       ))}
-      <li></li>
-       <div>
+      <br></br>
+      <div>
         {pages.map((p) => {
           return (
             <span
               onClick={(e) => {
-                props.onPageChanged(p)
+                props.onPageChanged(p);
               }}
               className={props.currentPage === p ? styles.selectedPage : ""}
             >
-             { p }|
-            
+              {p}|
             </span>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};

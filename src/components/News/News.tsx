@@ -1,4 +1,6 @@
 import React from "react";
+import c from './News.module.css'
+
 
 type PropsType = {
 
@@ -6,7 +8,7 @@ type PropsType = {
 
 
 const News = (props: PropsType) => {
-    return <div>News page</div>;
+    return <h2 className={c.text}>News page is being developed...</h2>;
   };
   
   export { News };
