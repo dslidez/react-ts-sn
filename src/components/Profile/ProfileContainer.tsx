@@ -18,6 +18,12 @@ class ProfileContainer extends React.Component<any> {
     this.props.getUserProfileTC(userId);
     this.props.getStatus(userId)
   }
+  componentDidUpdate() {
+      document.title = 'PAGE: ' + this.props.profile.fullName
+  }
+  componentWillUnmount() {
+    document.title = 'SOCIAL NETWORK'
+  }
 
   render() {
     return (
