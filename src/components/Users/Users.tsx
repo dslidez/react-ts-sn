@@ -15,6 +15,9 @@ export let Users = (props: any) => {
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i)
   }
+  const divStyle = {
+    cursor: 'pointer'
+    };
 
   return (
     <div className={styles.userspage}>
@@ -61,17 +64,29 @@ export let Users = (props: any) => {
         </div>
       ))}
       <br></br>
-      <div>
+      
+      <div style={divStyle}  >
+        
+        
         {pages.map((p) => {
+      
           return (
-            <span
-              onClick={(e) => {
-                props.onPageChanged(p);
-              }}
-              className={props.currentPage === p ? styles.selectedPage : ""}
-            >
-              {p}|
-            </span>
+            
+            <>
+             
+              {" "}
+              <span
+                onClick={(e) => {
+                  props.onPageChanged(p);
+                }}
+                className={props.currentPage === p ? styles.selectedPage : ""}
+              >
+                {p}|
+              </span>
+              
+            </>
+            
+              
           );
         })}
       </div>
