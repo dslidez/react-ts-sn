@@ -4,7 +4,7 @@ import "./App.css";
 import  {DialogsContainer}  from "./components/Dialogs/DialogsContainer";
 import  HeaderContainer  from "./components/Header/HeaderContainer";
 import { Login } from "./components/Login/Login";
-import { Music } from "./components/Music/Music";
+import { Documents } from "./components/Music/Documents";
 import {Navbar} from "./components/Navbar/Navbar";
 import { News } from "./components/News/News";
 import ProfileContainer from "./components/Profile/ProfileContainer";
@@ -29,7 +29,7 @@ const App: React.FC<PropsType> = (props: PropsType) => {
           <Route path={"/users"} render={() => <UsersContainer /> }/> 
           <Route path={"/settings"} render={() => <Settings /> }/> 
           <Route path={"/news"} render={() => <News /> }/> 
-          <Route path={"/music"} render={() => <Music /> }/> 
+          <Route path={"/doc"} render={() => <Documents /> }/> 
         </div>
       </div>
   );

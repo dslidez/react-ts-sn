@@ -16,13 +16,13 @@ export const Navbar = () => {
     <NavLink to="/dialogs" activeClassName={c.activeLink}> Dialogs </NavLink>
     </div>
     <div  className={c.item}>
-    <NavLink to="/settings" activeClassName={c.activeLink}> Settings </NavLink>
-    </div>
-    <div  className={c.item}>
     <NavLink to="/news" activeClassName={c.activeLink}> News </NavLink>
     </div>
     <div  className={c.item}>
-    <NavLink to="/music" activeClassName={c.activeLink}> Music </NavLink>
+    <NavLink to="/doc" activeClassName={c.activeLink}> Documents </NavLink>
+    </div>
+    <div  className={c.item}>
+    <NavLink to="/settings" activeClassName={c.activeLink}> Settings </NavLink>
     </div>
   </nav>
   </div>
