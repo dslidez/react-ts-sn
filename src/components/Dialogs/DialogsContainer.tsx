@@ -8,7 +8,7 @@ import { Dialogs } from "./Dialogs";
 
 
 
-let mapStateToProps = (state: any) => {
+let mapStateTo Props = (state: any) => {
   return {
     dialogsPage: state.dialogsPage,
   }
