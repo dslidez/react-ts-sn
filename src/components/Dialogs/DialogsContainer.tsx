@@ -5,9 +5,6 @@ import { sendMessageAC, updateNewMessageBodyAC } from "../../redux/store";
 import { Dialogs } from "./Dialogs";
 
 
-
-
-
 let mapStateToProps = (state: any) => {
   return {
     dialogsPage: state.dialogsPage,
@@ -18,7 +15,6 @@ let mapDispatchToProps = (dispatch: any) => {
   return {
     updateNewMessageBody: (body: string) => {
       dispatch(updateNewMessageBodyAC(body))
-      
     },
     sendMessage: () => {
       dispatch(sendMessageAC())
@@ -26,19 +22,12 @@ let mapDispatchToProps = (dispatch: any) => {
   }
 }
 
-// compose(
-//   connect(mapStateToProps, mapDispatchToProps),
-//   withAuthRedirect
-// )(Dialogs)
 
-// let AuthRedirectComponent = withAuthRedirect(Dialogs)
-
-
-// const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(AuthRedirectComponent)
 const DialogsContainer = compose<React.FC>(
   connect(mapStateToProps, mapDispatchToProps),
   withAuthRedirect
 )(Dialogs)
+
 
 export { DialogsContainer };
 
