@@ -34,7 +34,7 @@ export let authReducer = (state: AuthInitialStateType = initialState, action: an
 };
 
 //action creators:
-export const setAuthUse rData = ( userId: any , email: any, login: any) => { return { type: SET_USER_DATA, data: {userId, email, login} }}
+export const setAuthUserData = ( userId: any , email: any, login: any) => { return { type: SET_USER_DATA, data: {userId, email, login} }}
 
 //thunk creators:
 export const getAuthUserDataTC = () => { 
