@@ -11,7 +11,7 @@ export type AppStateType = ReturnType<typeof rootReducer>;
 
 export const rootReducer = combineReducers({
     dialogsPage: dialogsReducer,
-    profilePage: profileReducer,
+    profilePage: profil eReducer,
     usersPage: usersReducer,
     auth: authReducer
 })

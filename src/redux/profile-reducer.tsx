@@ -109,7 +109,7 @@ export const updateStatus = ( status: string ) => (dispatch: any) => {
   });
 }
 
-export const updat ePhoto = ( image: File ) => (dispatch: any) => {
+export const updatePhoto = ( image: File ) => (dispatch: any) => {
   profileAPI.updatePhoto(image)
   .then((response: any) => {
     if (response.data.resultCode === 0) {
